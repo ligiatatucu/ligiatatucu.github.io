@@ -1,6 +1,20 @@
 document.addEventListener("touchstart", vibrate);
+document.addEventListener("touchend", stop_timer);
 
+var timer_id;
+//-------------------------------------
+function start_timer()
+{
+  timer_id=setInterval(vibrate, 200);
+}
+//------------------------------------
+function stop_timer()
+{
+  clearInterval(timer_id);
+}
+//------------------------------------
 function vibrate() 
 {
-window.navigator.vibrate(200);
+window.navigator.vibrate(300);
 }
+//------------------------------------
