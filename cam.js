@@ -4,7 +4,7 @@ document.getElementById("id_bussines_level_version").innerHTML=
 "Business level version:" 
 + d.getFullYear() +"."+ d.getMonth() + "." + d.getDate() + ".1";
 
-var constraints={audio:true, video:{facingMode:"environment"}};
+var constraints={audio:true, video:{facingMode:"user"}};
 	
 
 navigator.mediaDevices.getUserMedia(constraints).then(on_succes).catch(on_error);
