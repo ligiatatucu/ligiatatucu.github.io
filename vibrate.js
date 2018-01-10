@@ -10,11 +10,13 @@ function start_timer()
 //------------------------------------
 function stop_timer()
 {
+  window.navigator.vibrate(0);
   clearInterval(timer_id);
 }
 //------------------------------------
 function vibrate() 
 {
+
 window.navigator.vibrate(300);
 }
 //------------------------------------
