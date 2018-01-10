@@ -2,7 +2,7 @@ var d= new Date();
 
 document.getElementById("id_bussines_level_version").innerHTML=
 "Business level version:" 
-+ d.getFullYear() +"."+ d.getMonth() + "." + d.getDate() + ".0";
++ d.getFullYear() +"."+ d.getMonth() + "." + d.getDate() + ".1";
 
 var constraints={audio:true, video:{facingMode:"environment"}};
 	
