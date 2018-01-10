@@ -4,7 +4,7 @@ document.getElementById("id_bussines_level_version").innerHTML=
 "Business level version:" 
 + d.getFullYear() +"."+ d.getMonth() + "." + d.getDate() + ".0";
 
-var constraints={audio:true, video:{facingMode:"download"}};
+var constraints={audio:true, video:{facingMode:"environment"}};
 	
 
 navigator.mediaDevices.getUserMedia(constraints).then(on_succes).catch(on_error);
@@ -14,7 +14,7 @@ video.addEventListener("touchstart", snap);
 //-----------------------
 function on_succes(stream)
 {
-	video.srcObject==stream;
+	video.srcObject=stream;
 }
 
 //----------------------
