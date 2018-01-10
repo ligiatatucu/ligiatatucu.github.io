@@ -1,4 +1,4 @@
-document.addEventListener("touchstart", vibrate);
+document.addEventListener("touchstart", start_timer);
 document.addEventListener("touchend", stop_timer);
 
 var timer_id;
