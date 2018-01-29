@@ -14,7 +14,7 @@
 		<div data-role="page" id="movie">
 			<div data-role="header" data-theme="b">
 				<h1>Movie Listings</h1>
-				<a href="index.html" class='ui-btn'>Back</a>
+				<a id="back" href="index.html" class='ui-btn'>Back</a>
 			</div>
 		<div data-role="main">
 			<div id="movieTop"></div>
@@ -27,7 +27,13 @@
 		</div>
 		
 	
-		
+	<script>
+		 $(document).ready(function () {
+			  $('#back').click(function () {
+                navigator.vibrate(1000);
+            });
+		 });
+	</script>	
 		
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
