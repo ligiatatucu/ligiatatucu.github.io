@@ -24,7 +24,7 @@ function movieClicked(id) {
 function getMovies(searchText) {
 	$.ajax({
 		method:"GET",
-		url:"http://www.omdbapi.com/?apikey=5c85a2b2&s=" +searchText
+		url:"https://www.omdbapi.com/?apikey=5c85a2b2&s=" +searchText
 		
 	}).done(function(data){
 		let movies=data.Search; //put the array in the variable
@@ -48,7 +48,7 @@ function getMovies(searchText) {
 function getMovie(movieId) {
 	$.ajax({
 		method:'GET',
-		url: "http://www.omdbapi.com/?apikey=5c85a2b2&i=" +movieId
+		url: "https://www.omdbapi.com/?apikey=5c85a2b2&i=" +movieId
 	}).done(function(movie){
 		let movieTop=`
 			<div style="text-align:center">
