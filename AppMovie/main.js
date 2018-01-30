@@ -1,3 +1,7 @@
+
+/* Author:Ligia Tatucu
+     Email: ligia.tatucu21@gmail.com */
+
 $(document).ready(function(){                                   
 	$('body').on('submit', '#searchForm', function(e){      //functia pentru a atribui functionalitate de submit formularului de tip search
 		let searchText=$('#searchText').val();
