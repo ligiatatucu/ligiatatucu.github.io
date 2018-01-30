@@ -1,5 +1,5 @@
-$(document).ready(function(){
-	$('body').on('submit', '#searchForm', function(e){
+$(document).ready(function(){                                   
+	$('body').on('submit', '#searchForm', function(e){      //functia pentru a atribui functionalitate de submit formularului de tip search
 		let searchText=$('#searchText').val();
 		getMovies(searchText);
 		e.preventDefault();
@@ -13,7 +13,7 @@ $(document).on('pagebeforeshow', '#movie', function(){
 
 //function onclick
 
-function movieClicked(id) {
+function movieClicked(id) {                                  
 	sessionStorage.setItem('movieId', id);
 	$.mobile.changePage('movie.html');
 	//console.log(id);
@@ -24,13 +24,13 @@ function movieClicked(id) {
 function getMovies(searchText) {
 	$.ajax({
 		method:"GET",
-		url:"https://www.omdbapi.com/?apikey=5c85a2b2&s=" +searchText
+		url:"https://www.omdbapi.com/?apikey=5c85a2b2&s=" +searchText //API BAZEI OMBD prin intermediul caruia se pot accesa filmele din baza de date
 		
 	}).done(function(data){
 		let movies=data.Search; //put the array in the variable
 		let output='';
 		
-		$.each(movies,function(index, movie){
+		$.each(movies,function(index, movie){ //interfata pentru afisarea variantelor de filme cautate(se afiseaza in index.html)
 			output +=`
 				<li>
 					<a onclick="movieClicked('${movie.imdbID}')"  href="#">
@@ -45,7 +45,7 @@ function getMovies(searchText) {
 	});
 }
 
-function getMovie(movieId) {
+function getMovie(movieId) { //afisarea informatiilor detaliate ale filmului 
 	$.ajax({
 		method:'GET',
 		url: "https://www.omdbapi.com/?apikey=5c85a2b2&i=" +movieId
